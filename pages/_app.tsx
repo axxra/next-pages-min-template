@@ -1,11 +1,32 @@
 import "@mantine/core/styles.css";
 import Head from "next/head";
-import { MantineProvider } from "@mantine/core";
-import { theme } from "../theme";
+import { MantineColorsTuple, MantineProvider, createTheme } from "@mantine/core";
+//import { theme } from "../theme";
 
 export default function App({ Component, pageProps }: any) {
+
+  const myColor: MantineColorsTuple = [
+    "#e5f9ff",
+    "#d6edf6",
+    "#b2d8e7",
+    "#8bc3d9",
+    "#6ab0cc",
+    "#54a5c5",
+    "#469fc2",
+    "#348aac",
+    "#267c9a",
+    "#016c89"
+  ];
+
+  const theme = createTheme({
+    colors: {
+      myColor,
+    },
+    primaryColor: "myColor"
+  });
+
   return (
-    <MantineProvider theme={theme}>
+    <MantineProvider defaultColorScheme="dark" theme={theme}>
       <Head>
         <title>Mantine Template</title>
         <meta

@@ -1,7 +1,7 @@
 import "@mantine/core/styles.css";
 import Head from "next/head";
 import { MantineColorsTuple, MantineProvider, createTheme } from "@mantine/core";
-//import { theme } from "../theme";
+//https://tabler.io/icons
 
 export default function App({ Component, pageProps }: any) {
 
